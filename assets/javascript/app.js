@@ -71,16 +71,22 @@ var Questions = {
 
 function renderQuestion() {
     $(".question").empty();
-    for (var i = 0; i < movies.length; i++) {
-      var a = $("<button>");
-      a.addClass("movie");
-      // Adding a data-attribute
-      a.attr("data-name", movies[i]);
-      // Providing the initial button text
-      a.text(movies[i]);
-      // Adding the button to the buttons-view div
-      $("#buttons-view").append(a);
-    }
+    var Qs = $("<h3>");
+    var A1 = $("<button>");
+    var A2 = $("<button>");
+    var A3 = $("<button>");
+    var A4 = $("<button>");
+    Qs.text(read);
+    A1.text(a);
+    A2.text(b);
+    A3.text(c);
+    A4.text(d);
+    $(".qusestion").append(Qs);
+    $(".qusestion").append(A1);
+    $(".qusestion").append(A2);
+    $(".qusestion").append(A3);
+    $(".qusestion").append(A4);
+
   }
 
 function game(){
