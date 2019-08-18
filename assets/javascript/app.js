@@ -3,7 +3,7 @@ var gameHidden = 0;
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
-function initialize(){
+function initialize() {
     gameHidden = 0;
     correct = 0;
     incorrect = 0;
@@ -16,13 +16,14 @@ var Questions = {
         b: "Gears 2",
         c: "Gears 3",
         d: "Gears 4",
+        
     },
     Question2: {
         read: "how to beat Psycho Mantis MGs1",
         a: "nothing",
-        b:"grenade launcher",
-        c:"cqc",
-        d:"connect remote to port 2 so he doesn't controll then have fun",
+        b: "grenade launcher",
+        c: "cqc",
+        d: "connect remote to port 2 so he doesn't controll then have fun",
     },
     Question3: {
         read: "Blue guy with cannon for an arm",
@@ -66,52 +67,159 @@ var Questions = {
         c: "Intervention",
         d: "M1",
     }
-        
+
 }
 
-function renderQuestion() {
+function renderQuestion1() {
     $(".question").empty();
     var Qs = $("<h3>");
     var A1 = $("<button>");
     var A2 = $("<button>");
     var A3 = $("<button>");
     var A4 = $("<button>");
-    Qs.text(read);
-    A1.text(a);
-    A2.text(b);
-    A3.text(c);
-    A4.text(d);
-    $(".qusestion").append(Qs);
-    $(".qusestion").append(A1);
-    $(".qusestion").append(A2);
-    $(".qusestion").append(A3);
-    $(".qusestion").append(A4);
-
-  }
-
-function game(){
-    //each question will be nested into an if and ran after
-    if(){
-        
-    }
-    if(){
-    }
-    if(){   
-    }
-    if(){
-
-    }
-    if(){
-        
-    }
-    if(){
-        
-    }
-    if(){
-        
-    }
-    if(){
-        
-    }
+    Qs.text(Questions.Question1.read);
+    A1.text(Questions.Question1.a);
+    A2.text(Questions.Question1.b);
+    A3.text(Questions.Question1.c);
+    A4.text(Questions.Question1.d);
+    $(".question").append(Qs);
+    $(".question").append(A1);
+    $(".question").append(A2);
+    $(".question").append(A3);
+    $(".question").append(A4);
 
 }
+function renderQuestion2() {
+    $(".question").empty();
+    var Qs = $("<h3>");
+    var A1 = $("<button>");
+    var A2 = $("<button>");
+    var A3 = $("<button>");
+    var A4 = $("<button>");
+    Qs.text(Questions.Question2.read);
+    A1.text(Questions.Question2.a);
+    A2.text(Questions.Question2.b);
+    A3.text(Questions.Question2.c);
+    A4.text(Questions.Question2.d);
+    $(".question").append(Qs);
+    $(".question").append(A1);
+    $(".question").append(A2);
+    $(".question").append(A3);
+    $(".question").append(A4);
+
+}
+function renderQuestion3() {
+    $(".question").empty();
+    var Qs = $("<h3>");
+    var A1 = $("<button>");
+    var A2 = $("<button>");
+    var A3 = $("<button>");
+    var A4 = $("<button>");
+    Qs.text(Questions.Question3.read);
+    A1.text(Questions.Question3.a);
+    A2.text(Questions.Question3.b);
+    A3.text(Questions.Question3.c);
+    A4.text(Questions.Question3.d);
+    $(".question").append(Qs);
+    $(".question").append(A1);
+    $(".question").append(A2);
+    $(".question").append(A3);
+    $(".question").append(A4);
+
+}
+function renderQuestion4() {
+    $(".question").empty();
+    var Qs = $("<h3>");
+    var A1 = $("<button>")4
+    var A2 = $("<button>");
+    var A3 = $("<button>");
+    var A4 = $("<button>");
+    Qs.text(Questions.Question4.read);
+    A1.text(Questions.Question4.a);
+    A2.text(Questions.Question4.b);
+    A3.text(Questions.Question4.c);
+    A4.text(Questions.Question4.d);
+    $(".question").append(Qs);
+    $(".question").append(A1);
+    $(".question").append(A2);
+    $(".question").append(A3);
+    $(".question").append(A4);
+
+}
+function renderQuestion5() {
+    $(".question").empty();
+    var Qs = $("<h3>");
+    var A1 = $("<button>");
+    var A2 = $("<button>");
+    var A3 = $("<button>");
+    var A4 = $("<button>");
+    Qs.text(Questions.Question5.read);
+    A1.text(Questions.Question5.a);
+    A2.text(Questions.Question5.b);
+    A3.text(Questions.Question5.c);
+    A4.text(Questions.Question5.d);
+    $(".question").append(Qs);
+    $(".question").append(A1);
+    $(".question").append(A2);
+    $(".question").append(A3);
+    $(".question").append(A4);
+
+}
+function renderQuestion6() {
+    $(".question").empty();
+    var Qs = $("<h3>");
+    var A1 = $("<button>");
+    var A2 = $("<button>");
+    var A3 = $("<button>");
+    var A4 = $("<button>");
+    Qs.text(Questions.Question6.read);
+    A1.text(Questions.Question6.a);
+    A2.text(Questions.Question6.b);
+    A3.text(Questions.Question6.c);
+    A4.text(Questions.Question6.d);
+    $(".question").append(Qs);
+    $(".question").append(A1);
+    $(".question").append(A2);
+    $(".question").append(A3);
+    $(".question").append(A4);
+
+}
+function renderQuestion7() {
+    $(".question").empty();
+    var Qs = $("<h3>");
+    var A1 = $("<button>");
+    var A2 = $("<button>");
+    var A3 = $("<button>");
+    var A4 = $("<button>");
+    Qs.text(Questions.Question7.read);
+    A1.text(Questions.Question7.a);
+    A2.text(Questions.Question7.b);
+    A3.text(Questions.Question7.c);
+    A4.text(Questions.Question7.d);
+    $(".question").append(Qs);
+    $(".question").append(A1);
+    $(".question").append(A2);
+    $(".question").append(A3);
+    $(".question").append(A4);
+
+}
+function renderQuestion8() {
+    $(".question").empty();
+    var Qs = $("<h3>");
+    var A1 = $("<button>");
+    var A2 = $("<button>");
+    var A3 = $("<button>");
+    var A4 = $("<button>");
+    Qs.text(Questions.Question8.read);
+    A1.text(Questions.Question8.a);
+    A2.text(Questions.Question8.b);
+    A3.text(Questions.Question8.c);
+    A4.text(Questions.Question8.d);
+    $(".question").append(Qs);
+    $(".question").append(A1);
+    $(".question").append(A2);
+    $(".question").append(A3);
+    $(".question").append(A4);
+
+}
+
