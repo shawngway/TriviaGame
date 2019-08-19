@@ -4,10 +4,6 @@ var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
 
-var A1;
-var A2;
-var A3;
-var A4;
 
 function initialize() {
     gameHidden = 0;
@@ -88,9 +84,9 @@ function renderQuestion1() {
     $(".question").empty();
     var Qs = $("<h3>");
     A1 = $("<button class='Q1 a1'>");
-    A2 = $("<button class='Q1 b'>");
-    A3 = $("<button class='Q1 c'>");
-    A4 = $("<button class='Q1 d'>");
+    A2 = $("<button class='Q1 b1'>");
+    A3 = $("<button class='Q1 c1'>");
+    A4 = $("<button class='Q1 d1'>");
     Qs.text(Questions.Question1.read);
     A1.text(Questions.Question1.a);
     A2.text(Questions.Question1.b);
@@ -125,10 +121,10 @@ function renderQuestion2() {
 function renderQuestion3() {
     $(".question").empty();
     var Qs = $("<h3>");
-    var A1 = $("<button class='Q3 a'>");
-    var A2 = $("<button class='Q3 b'>");
-    var A3 = $("<button class='Q3 c'>");
-    var A4 = $("<button class='Q3 d'>");
+    var A1 = $("<button class='Q3 a3'>");
+    var A2 = $("<button class='Q3 b3'>");
+    var A3 = $("<button class='Q3 c3'>");
+    var A4 = $("<button class='Q3 d3'>");
     Qs.text(Questions.Question3.read);
     A1.text(Questions.Question3.a);
     A2.text(Questions.Question3.b);
@@ -144,10 +140,10 @@ function renderQuestion3() {
 function renderQuestion4() {
     $(".question").empty();
     var Qs = $("<h3>");
-    var A1 = $("<button class='Q4 a'>");
-    var A2 = $("<button class='Q4 b'>");
-    var A3 = $("<button class='Q4 c'>");
-    var A4 = $("<button class='Q4 d'>");
+    var A1 = $("<button class='Q4 a4'>");
+    var A2 = $("<button class='Q4 b4'>");
+    var A3 = $("<button class='Q4 c4'>");
+    var A4 = $("<button class='Q4 d4'>");
     Qs.text(Questions.Question4.read);
     A1.text(Questions.Question4.a);
     A2.text(Questions.Question4.b);
@@ -163,10 +159,10 @@ function renderQuestion4() {
 function renderQuestion5() {
     $(".question").empty();
     var Qs = $("<h3>");
-    var A1 = $("<button class='Q5 a'>");
-    var A2 = $("<button class='Q5 b'>");
-    var A3 = $("<button class='Q5 c'>");
-    var A4 = $("<button class='Q5 d'>");
+    var A1 = $("<button class='Q5 a5'>");
+    var A2 = $("<button class='Q5 b5'>");
+    var A3 = $("<button class='Q5 c5'>");
+    var A4 = $("<button class='Q5 d5'>");
     Qs.text(Questions.Question5.read);
     A1.text(Questions.Question5.a);
     A2.text(Questions.Question5.b);
@@ -182,10 +178,10 @@ function renderQuestion5() {
 function renderQuestion6() {
     $(".question").empty();
     var Qs = $("<h3>");
-    var A1 = $("<button class='Q6 a'>");
-    var A2 = $("<button class='Q6 b'>");
-    var A3 = $("<button class='Q6 c'>");
-    var A4 = $("<button class='Q6 d'>");
+    var A1 = $("<button class='Q6 a6'>");
+    var A2 = $("<button class='Q6 b6'>");
+    var A3 = $("<button class='Q6 c6'>");
+    var A4 = $("<button class='Q6 d6'>");
     Qs.text(Questions.Question6.read);
     A1.text(Questions.Question6.a);
     A2.text(Questions.Question6.b);
@@ -201,10 +197,10 @@ function renderQuestion6() {
 function renderQuestion7() {
     $(".question").empty();
     var Qs = $("<h3>");
-    var A1 = $("<button class='Q7 a'>");
-    var A2 = $("<button class='Q7 b'>");
-    var A3 = $("<button class='Q7 c'>");
-    var A4 = $("<button class='Q7 d'>");
+    var A1 = $("<button class='Q7 a7'>");
+    var A2 = $("<button class='Q7 b7'>");
+    var A3 = $("<button class='Q7 c7'>");
+    var A4 = $("<button class='Q7 d7'>");
     Qs.text(Questions.Question7.read);
     A1.text(Questions.Question7.a);
     A2.text(Questions.Question7.b);
@@ -220,10 +216,10 @@ function renderQuestion7() {
 function renderQuestion8() {
     $(".question").empty();
     var Qs = $("<h3>");
-    var A1 = $("<button class='Q8 a'>");
-    var A2 = $("<button class='Q8 b'>");
-    var A3 = $("<button class='Q8 c'>");
-    var A4 = $("<button class='Q8 d'>");
+    var A1 = $("<button class='Q8 a8'>");
+    var A2 = $("<button class='Q8 b8'>");
+    var A3 = $("<button class='Q8 c8'>");
+    var A4 = $("<button class='Q8 d8'>");
     Qs.text(Questions.Question8.read);
     A1.text(Questions.Question8.a);
     A2.text(Questions.Question8.b);
@@ -247,19 +243,13 @@ $(".a1").on("click", function () {
         renderQuestion2();
     }
 
-});
+});//correct
 $(".b1").on("click", function (){
     if (gameHidden === 0) {
         gameHidden++;
         incorrect++;
         console.log("incorrect: " + incorrect);
         renderQuestion2();
-    }
-    else if (gameHidden === 1) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + icorrect);
-        renderQuestion3();
     }
 
 });
@@ -270,12 +260,6 @@ $(".c1").on("click", function (){
         console.log("incorrect: " + incorrect);
         renderQuestion2();
     }
-    else if (gameHidden === 1) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + icorrect);
-        renderQuestion3();
-    }
 
 });
 $(".d1").on("click", function (){
@@ -285,15 +269,41 @@ $(".d1").on("click", function (){
         console.log("incorrect: " + incorrect);
         renderQuestion2();
     }
-    else if (gameHidden === 1) {
+
+});
+
+$(".a2").on("click", function () {
+    console.log("working");
+    if (gameHidden === 1) {
         gameHidden++;
-        correct++;
-        console.log("correct: " + correct);
+        incorrect++;
+        console.log("incorrect: " + incorrect);
         renderQuestion3();
     }
 
 });
-$(".a2").on("click", function () {
+$(".b2").on("click", function () {
+    console.log("working");
+    if (gameHidden === 1) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion3();
+    }
+
+});
+$(".c2").on("click", function () {
+    console.log("working");
+    if (gameHidden === 1) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion3();
+    }
+
+});
+$(".d2").on("click", function () {
+    console.log("working");
     if (gameHidden === 1) {
         gameHidden++;
         correct++;
@@ -301,7 +311,268 @@ $(".a2").on("click", function () {
         renderQuestion3();
     }
 
+}); //correct
+$(".a3").on("click", function () {
+    console.log("working");
+    if (gameHidden === 2) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion4();
+    }
+
 });
+$(".b3").on("click", function () {
+    console.log("working");
+    if (gameHidden === 2) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion4();
+    }
+
+});
+$(".c3").on("click", function () {
+    console.log("working");
+    if (gameHidden === 2) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion4();
+    }
+
+});
+$(".d3").on("click", function () {
+    console.log("working");
+    if (gameHidden === 2) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        renderQuestion4();
+    }
+
+}); //correct
+$(".a4").on("click", function () {
+    console.log("working");
+    if (gameHidden === 1) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion5();
+    }
+
+});
+$(".b4").on("click", function () {
+    console.log("working");
+    if (gameHidden === 1) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion5();
+    }
+
+});
+$(".c4").on("click", function () {
+    console.log("working");
+    if (gameHidden === 3) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        renderQuestion5();
+    }
+
+});//correct
+$(".d4").on("click", function () {
+    console.log("working");
+    if (gameHidden === 3) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion5();
+    }
+
+});
+$(".a5").on("click", function () {
+    console.log("working");
+    if (gameHidden === 4) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        renderQuestion6();
+    }
+
+});//correct
+$(".b5").on("click", function () {
+    console.log("working");
+    if (gameHidden === 4) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion6();
+    }
+
+});
+$(".c5").on("click", function () {
+    console.log("working");
+    if (gameHidden === 4) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion6();
+    }
+
+});
+$(".d5").on("click", function () {
+    console.log("working");
+    if (gameHidden === 4) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion6();
+    }
+
+}); 
+$(".a6").on("click", function () {
+    console.log("working");
+    if (gameHidden === 5) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion7();
+    }
+
+});
+$(".b6").on("click", function () {
+    console.log("working");
+    if (gameHidden === 5) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion7();
+    }
+
+});
+$(".c6").on("click", function () {
+    console.log("working");
+    if (gameHidden === 5) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        renderQuestion7();
+    }
+
+});//correct
+$(".d6").on("click", function () {
+    console.log("working");
+    if (gameHidden === 5) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion7();
+    }
+
+});
+$(".a7").on("click", function () {
+    console.log("working");
+    if (gameHidden === 6) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        renderQuestion8();
+    }
+
+});//correct
+$(".b7").on("click", function () {
+    console.log("working");
+    if (gameHidden === 6) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion8();
+    }
+
+});
+$(".c7").on("click", function () {
+    console.log("working");
+    if (gameHidden === 6) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion8();
+    }
+
+});
+$(".d7").on("click", function () {
+    console.log("working");
+    if (gameHidden === 6) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        renderQuestion8();
+    }
+
+}); 
+$(".a8").on("click", function () {
+    console.log("working");
+    if (gameHidden === 7) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        //end screen
+    }
+
+});
+$(".b8").on("click", function () {
+    console.log("working");
+    if (gameHidden === 7) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        //end screen
+    }
+
+});
+$(".c8").on("click", function () {
+    console.log("working");
+    if (gameHidden === 7) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        //end screeb
+    }
+
+});
+$(".d8").on("click", function () {
+    console.log("working");
+    if (gameHidden === 7) {
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        //end screen
+    }
+
+});
+
+
+
+// function timeConverter(t) {
+
+//     var minutes = Math.floor(t / 60);
+//     var seconds = t - (minutes * 60);
+  
+//     if (seconds < 10) {
+//       seconds = "0" + seconds;
+//     }
+  
+//     if (minutes === 0) {
+//       minutes = "00";
+//     }
+//     else if (minutes < 10) {
+//       minutes = "0" + minutes;
+//     }
+  
+//     return minutes + ":" + seconds;
+//   }
 
 
 
