@@ -233,6 +233,7 @@ function renderQuestion8() {
 
 }
 console.log(correct);
+
 renderQuestion1();
 $(".a1").on("click", function () {
     if (gameHidden === 0) {
@@ -521,7 +522,7 @@ $(".a8").on("click", function () {
         //end screen
     }
 
-});
+});//correct
 $(".b8").on("click", function () {
     console.log("working");
     if (gameHidden === 7) {
