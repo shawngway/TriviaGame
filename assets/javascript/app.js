@@ -13,11 +13,11 @@ function initialize() {
 }
 var Questions = {
     Question1: {
-        read: "Best Gears of War",
-        a: "Gears 1",
-        b: "Gears 2",
-        c: "Gears 3",
-        d: "Gears 4",
+        read: "MMORPG R-tard -- Cartman",
+        a: "World of Warcraft",
+        b: "splinter cell",
+        c: "grand turismo",
+        d: "Gears of War",
         //a
 
     },
@@ -70,7 +70,7 @@ var Questions = {
         //a
     },
     Question8: {
-        read: "CSgo's snipers weapon of choice",
+        read: "CSgo's sniper weapon of choice",
         a: "AWP",
         b: "M249",
         c: "Intervention",
@@ -232,7 +232,7 @@ function renderQuestion8() {
     $(".question").append(A4);
 
 }
-console.log(correct);
+
 
 renderQuestion1();
 // $(".a1").on("click", function () {
@@ -559,7 +559,8 @@ function problem1(){
         correct++;
         console.log("correct: " + correct);
         console.log("gameHidden: " + gameHidden);
-        renderQuestion2();
+        setTimeout(renderQuestion2, 1000 * 2.5);
+        yes();
     }
 };
 function problem2(){
@@ -568,7 +569,8 @@ function problem2(){
         gameHidden++;
         correct++;
         console.log("correct: " + correct);
-        renderQuestion3();
+        setTimeout(renderQuestion3, 1000 * 2.5);
+        yes();
     }
 };
 function problem3(){
@@ -577,7 +579,8 @@ function problem3(){
         gameHidden++;
         correct++;
         console.log("correct: " + correct);
-        renderQuestion4();
+        setTimeout(renderQuestion4, 1000 * 2.5);
+        yes();
     }
 };
 function problem4(){
@@ -586,7 +589,8 @@ function problem4(){
         gameHidden++;
         correct++;
         console.log("correct: " + correct);
-        renderQuestion5();
+        setTimeout(renderQuestion5, 1000 * 2.5);
+        yes();
     }
 };
 function problem5(){
@@ -595,7 +599,8 @@ function problem5(){
         gameHidden++;
         correct++;
         console.log("correct: " + correct);
-        renderQuestion6();
+        setTimeout(renderQuestion6, 1000 * 2.5);
+        yes();
     }
 };
 function problem6(){
@@ -604,7 +609,8 @@ function problem6(){
         gameHidden++;
         correct++;
         console.log("correct: " + correct);
-        renderQuestion7();
+        setTimeout(renderQuestion7, 1000 * 2.5);
+        yes();
     }
 };
 function problem7(){
@@ -613,7 +619,8 @@ function problem7(){
         gameHidden++;
         correct++;
         console.log("correct: " + correct);
-        renderQuestion8();
+        setTimeout(renderQuestion8, 1000 * 2.5);
+        yes();
     }
 };
 function problem8(){
@@ -622,6 +629,7 @@ function problem8(){
         gameHidden++;
         correct++;
         console.log("correct: " + correct);
+        scoreScreen();
         //end screen
     }
 }
@@ -630,7 +638,8 @@ function problem1no(){
                 gameHidden++;
                 incorrect++;
                 console.log("incorrect: " + incorrect);
-                renderQuestion2();
+                setTimeout(renderQuestion2, 1000 * 2.5);
+                no();
             }
 }
 function problem2no(){
@@ -638,7 +647,8 @@ function problem2no(){
                 gameHidden++;
                 incorrect++;
                 console.log("incorrect: " + incorrect);
-                renderQuestion3();
+                setTimeout(renderQuestion3, 1000 * 2.5);
+                no();
             }
 }
 function problem3no(){
@@ -646,7 +656,8 @@ function problem3no(){
                 gameHidden++;
                 incorrect++;
                 console.log("incorrect: " + incorrect);
-                renderQuestion4();
+                setTimeout(renderQuestion4, 1000 * 2.5);
+                no();
             }
 }
 function problem4no(){
@@ -654,7 +665,8 @@ function problem4no(){
                 gameHidden++;
                 incorrect++;
                 console.log("incorrect: " + incorrect);
-                renderQuestion5();
+                setTimeout(renderQuestion5, 1000 * 2.5);
+                no();
             }
 }
 function problem5no(){
@@ -662,7 +674,8 @@ function problem5no(){
                 gameHidden++;
                 incorrect++;
                 console.log("incorrect: " + incorrect);
-                renderQuestion6();
+                setTimeout(renderQuestion6, 1000 * 2.5);
+                no();
             }
 }
 function problem6no(){
@@ -670,7 +683,8 @@ function problem6no(){
                 gameHidden++;
                 incorrect++;
                 console.log("incorrect: " + incorrect);
-                renderQuestion7();
+                setTimeout(renderQuestion7, 1000 * 2.5);
+                no();
             }
 }
 function problem7no(){
@@ -678,7 +692,8 @@ function problem7no(){
                 gameHidden++;
                 incorrect++;
                 console.log("incorrect: " + incorrect);
-                renderQuestion8();
+                setTimeout(renderQuestion8, 1000 * 2.5);
+                no();
             }
 }
 function problem8no(){
@@ -686,8 +701,26 @@ function problem8no(){
                 gameHidden++;
                 incorrect++;
                 console.log("incorrect: " + incorrect);
+                scoreScreen();
                 //end;
             }
+}
+function yes(){
+    $(".question").empty();
+    $(".question").append('<img id="theImg" src="assets/images/YES.gif" />');
+
+}
+function no(){
+    $(".question").empty();
+    $(".question").append('<img id="theImg" src="assets/images/Nope.gif" />');
+}
+function scoreScreen(){
+    $(".question").empty();
+    var right = $("<h2>");
+    var wrong = $("<h2>");
+    right.text("Correct: " + correct);
+    wrong.text("Incorrect: " + incorrect);
+    $(".question").append(right, wrong);
 }
 $(document).on("click", ".a1", problem1);
 $(document).on("click", ".d2", problem2);
