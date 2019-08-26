@@ -45,7 +45,7 @@ var Questions = {
         d: "Arma III",
         //c
     },
-    Questions5: {
+    Question5: {
         read: "burst rifle name in Halo 2",
         a: "battle rifle",
         b: "needler",
@@ -61,7 +61,7 @@ var Questions = {
         d: "spanish",
         //c
     },
-    Questions7: {
+    Question7: {
         read: "In a MOBA the center lane player is called",
         a: "mid player",
         b: "attack",
@@ -69,8 +69,8 @@ var Questions = {
         d: "farmer",
         //a
     },
-    Questions8: {
-        read: "the bolt action sniper in Counter Strike Global defense",
+    Question8: {
+        read: "CSgo's snipers weapon of choice",
         a: "AWP",
         b: "M249",
         c: "Intervention",
@@ -235,7 +235,325 @@ function renderQuestion8() {
 console.log(correct);
 
 renderQuestion1();
-$(".a1").on("click", function () {
+// $(".a1").on("click", function () {
+//     if (gameHidden === 0) {
+//         gameHidden++;
+//         correct++;
+//         console.log("correct: " + correct);
+//         console.log("gameHidden: " + gameHidden);
+//         renderQuestion2();
+//     }
+
+// });//correct
+// $(".b1").on("click", function (){
+//     if (gameHidden === 0) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion2();
+//     }
+
+// });
+// $(".c1").on("click", function (){
+//     if (gameHidden === 0) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion2();
+//     }
+
+// });
+// $(".d1").on("click", function (){
+//     if (gameHidden === 0) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion2();
+//     }
+
+// });
+
+// $(".a2").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 1) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion3();
+//     }
+
+// });
+// $(".b2").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 1) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion3();
+//     }
+
+// });
+// $(".c2").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 1) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion3();
+//     }
+
+// });
+// $(".d2").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 1) {
+//         gameHidden++;
+//         correct++;
+//         console.log("correct: " + correct);
+//         renderQuestion3();
+//     }
+
+// }); //correct
+// $(".a3").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 2) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion4();
+//     }
+
+// });
+// $(".b3").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 2) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion4();
+//     }
+
+// });
+// $(".c3").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 2) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion4();
+//     }
+
+// });
+// $(".d3").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 2) {
+//         gameHidden++;
+//         correct++;
+//         console.log("correct: " + correct);
+//         renderQuestion4();
+//     }
+
+// }); //correct
+// $(".a4").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 1) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion5();
+//     }
+
+// });
+// $(".b4").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 1) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion5();
+//     }
+
+// });
+// $(".c4").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 3) {
+//         gameHidden++;
+//         correct++;
+//         console.log("correct: " + correct);
+//         renderQuestion5();
+//     }
+
+// });//correct
+// $(".d4").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 3) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion5();
+//     }
+
+// });
+// $(".a5").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 4) {
+//         gameHidden++;
+//         correct++;
+//         console.log("correct: " + correct);
+//         renderQuestion6();
+//     }
+
+// });//correct
+// $(".b5").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 4) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion6();
+//     }
+
+// });
+// $(".c5").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 4) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion6();
+//     }
+
+// });
+// $(".d5").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 4) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion6();
+//     }
+
+// }); 
+// $(".a6").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 5) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion7();
+//     }
+
+// });
+// $(".b6").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 5) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion7();
+//     }
+
+// });
+// $(".c6").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 5) {
+//         gameHidden++;
+//         correct++;
+//         console.log("correct: " + correct);
+//         renderQuestion7();
+//     }
+
+// });//correct
+// $(".d6").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 5) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion7();
+//     }
+
+// });
+// $(".a7").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 6) {
+//         gameHidden++;
+//         correct++;
+//         console.log("correct: " + correct);
+//         renderQuestion8();
+//     }
+
+// });//correct
+// $(".b7").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 6) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion8();
+//     }
+
+// });
+// $(".c7").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 6) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion8();
+//     }
+
+// });
+// $(".d7").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 6) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         renderQuestion8();
+//     }
+
+// }); 
+// $(".a8").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 7) {
+//         gameHidden++;
+//         correct++;
+//         console.log("correct: " + correct);
+//         //end screen
+//     }
+
+// });//correct
+// $(".b8").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 7) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         //end screen
+//     }
+
+// });
+// $(".c8").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 7) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         //end screeb
+//     }
+
+// });
+// $(".d8").on("click", function () {
+//     console.log("working");
+//     if (gameHidden === 7) {
+//         gameHidden++;
+//         incorrect++;
+//         console.log("incorrect: " + incorrect);
+//         //end screen
+//     }
+
+// });
+function problem1(){
     if (gameHidden === 0) {
         gameHidden++;
         correct++;
@@ -243,67 +561,8 @@ $(".a1").on("click", function () {
         console.log("gameHidden: " + gameHidden);
         renderQuestion2();
     }
-
-});//correct
-$(".b1").on("click", function (){
-    if (gameHidden === 0) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion2();
-    }
-
-});
-$(".c1").on("click", function (){
-    if (gameHidden === 0) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion2();
-    }
-
-});
-$(".d1").on("click", function (){
-    if (gameHidden === 0) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion2();
-    }
-
-});
-
-$(".a2").on("click", function () {
-    console.log("working");
-    if (gameHidden === 1) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion3();
-    }
-
-});
-$(".b2").on("click", function () {
-    console.log("working");
-    if (gameHidden === 1) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion3();
-    }
-
-});
-$(".c2").on("click", function () {
-    console.log("working");
-    if (gameHidden === 1) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion3();
-    }
-
-});
-$(".d2").on("click", function () {
+};
+function problem2(){
     console.log("working");
     if (gameHidden === 1) {
         gameHidden++;
@@ -311,39 +570,8 @@ $(".d2").on("click", function () {
         console.log("correct: " + correct);
         renderQuestion3();
     }
-
-}); //correct
-$(".a3").on("click", function () {
-    console.log("working");
-    if (gameHidden === 2) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion4();
-    }
-
-});
-$(".b3").on("click", function () {
-    console.log("working");
-    if (gameHidden === 2) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion4();
-    }
-
-});
-$(".c3").on("click", function () {
-    console.log("working");
-    if (gameHidden === 2) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion4();
-    }
-
-});
-$(".d3").on("click", function () {
+};
+function problem3(){
     console.log("working");
     if (gameHidden === 2) {
         gameHidden++;
@@ -351,29 +579,8 @@ $(".d3").on("click", function () {
         console.log("correct: " + correct);
         renderQuestion4();
     }
-
-}); //correct
-$(".a4").on("click", function () {
-    console.log("working");
-    if (gameHidden === 1) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion5();
-    }
-
-});
-$(".b4").on("click", function () {
-    console.log("working");
-    if (gameHidden === 1) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion5();
-    }
-
-});
-$(".c4").on("click", function () {
+};
+function problem4(){
     console.log("working");
     if (gameHidden === 3) {
         gameHidden++;
@@ -381,178 +588,127 @@ $(".c4").on("click", function () {
         console.log("correct: " + correct);
         renderQuestion5();
     }
-
-});//correct
-$(".d4").on("click", function () {
+};
+function problem5(){
     console.log("working");
+    if (gameHidden === 4) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        renderQuestion6();
+    }
+};
+function problem6(){
+    console.log("working");
+    if (gameHidden === 5) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        renderQuestion7();
+    }
+};
+function problem7(){
+    console.log("working");
+    if (gameHidden === 6) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        renderQuestion8();
+    }
+};
+function problem8(){
+    console.log("working");
+    if (gameHidden === 7) {
+        gameHidden++;
+        correct++;
+        console.log("correct: " + correct);
+        //end screen
+    }
+}
+function problem1no(){
+    if (gameHidden === 0) {
+                gameHidden++;
+                incorrect++;
+                console.log("incorrect: " + incorrect);
+                renderQuestion2();
+            }
+}
+function problem2no(){
+    if (gameHidden === 1) {
+                gameHidden++;
+                incorrect++;
+                console.log("incorrect: " + incorrect);
+                renderQuestion3();
+            }
+}
+function problem3no(){
+    if (gameHidden === 2) {
+                gameHidden++;
+                incorrect++;
+                console.log("incorrect: " + incorrect);
+                renderQuestion4();
+            }
+}
+function problem4no(){
     if (gameHidden === 3) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion5();
-    }
-
-});
-$(".a5").on("click", function () {
-    console.log("working");
+                gameHidden++;
+                incorrect++;
+                console.log("incorrect: " + incorrect);
+                renderQuestion5();
+            }
+}
+function problem5no(){
     if (gameHidden === 4) {
-        gameHidden++;
-        correct++;
-        console.log("correct: " + correct);
-        renderQuestion6();
-    }
-
-});//correct
-$(".b5").on("click", function () {
-    console.log("working");
-    if (gameHidden === 4) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion6();
-    }
-
-});
-$(".c5").on("click", function () {
-    console.log("working");
-    if (gameHidden === 4) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion6();
-    }
-
-});
-$(".d5").on("click", function () {
-    console.log("working");
-    if (gameHidden === 4) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion6();
-    }
-
-}); 
-$(".a6").on("click", function () {
-    console.log("working");
+                gameHidden++;
+                incorrect++;
+                console.log("incorrect: " + incorrect);
+                renderQuestion6();
+            }
+}
+function problem6no(){
     if (gameHidden === 5) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion7();
-    }
-
-});
-$(".b6").on("click", function () {
-    console.log("working");
-    if (gameHidden === 5) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion7();
-    }
-
-});
-$(".c6").on("click", function () {
-    console.log("working");
-    if (gameHidden === 5) {
-        gameHidden++;
-        correct++;
-        console.log("correct: " + correct);
-        renderQuestion7();
-    }
-
-});//correct
-$(".d6").on("click", function () {
-    console.log("working");
-    if (gameHidden === 5) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion7();
-    }
-
-});
-$(".a7").on("click", function () {
-    console.log("working");
+                gameHidden++;
+                incorrect++;
+                console.log("incorrect: " + incorrect);
+                renderQuestion7();
+            }
+}
+function problem7no(){
     if (gameHidden === 6) {
-        gameHidden++;
-        correct++;
-        console.log("correct: " + correct);
-        renderQuestion8();
-    }
-
-});//correct
-$(".b7").on("click", function () {
-    console.log("working");
-    if (gameHidden === 6) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion8();
-    }
-
-});
-$(".c7").on("click", function () {
-    console.log("working");
-    if (gameHidden === 6) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion8();
-    }
-
-});
-$(".d7").on("click", function () {
-    console.log("working");
-    if (gameHidden === 6) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        renderQuestion8();
-    }
-
-}); 
-$(".a8").on("click", function () {
-    console.log("working");
+                gameHidden++;
+                incorrect++;
+                console.log("incorrect: " + incorrect);
+                renderQuestion8();
+            }
+}
+function problem8no(){
     if (gameHidden === 7) {
-        gameHidden++;
-        correct++;
-        console.log("correct: " + correct);
-        //end screen
-    }
+                gameHidden++;
+                incorrect++;
+                console.log("incorrect: " + incorrect);
+                //end;
+            }
+}
+$(document).on("click", ".a1", problem1);
+$(document).on("click", ".d2", problem2);
+$(document).on("click", ".d3", problem3);
+$(document).on("click", ".c4", problem4);
+$(document).on("click", ".a5", problem5);
+$(document).on("click", ".c6", problem6);
+$(document).on("click", ".a7", problem7);
+$(document).on("click", ".a8", problem8);
+$(document).on("click", ".Q1", problem1no);
+$(document).on("click", ".Q2", problem2no);
+$(document).on("click", ".Q3", problem3no);
+$(document).on("click", ".Q4", problem4no);
+$(document).on("click", ".Q5", problem5no);
+$(document).on("click", ".Q6", problem6no);
+$(document).on("click", ".Q7", problem7no);
+$(document).on("click", ".Q8", problem8no);
 
-});//correct
-$(".b8").on("click", function () {
-    console.log("working");
-    if (gameHidden === 7) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        //end screen
-    }
 
-});
-$(".c8").on("click", function () {
-    console.log("working");
-    if (gameHidden === 7) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        //end screeb
-    }
 
-});
-$(".d8").on("click", function () {
-    console.log("working");
-    if (gameHidden === 7) {
-        gameHidden++;
-        incorrect++;
-        console.log("incorrect: " + incorrect);
-        //end screen
-    }
 
-});
 
 
 
