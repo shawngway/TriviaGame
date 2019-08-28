@@ -3,7 +3,8 @@ var gameHidden = 0;
 var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
-
+var time = 30;
+var clockRunning = false;
 
 function initialize() {
     gameHidden = 0;
@@ -553,7 +554,7 @@ renderQuestion1();
 //     }
 
 // });
-function problem1(){
+function problem1() {
     if (gameHidden === 0) {
         gameHidden++;
         correct++;
@@ -563,7 +564,7 @@ function problem1(){
         yes();
     }
 };
-function problem2(){
+function problem2() {
     console.log("working");
     if (gameHidden === 1) {
         gameHidden++;
@@ -573,7 +574,7 @@ function problem2(){
         yes();
     }
 };
-function problem3(){
+function problem3() {
     console.log("working");
     if (gameHidden === 2) {
         gameHidden++;
@@ -583,7 +584,7 @@ function problem3(){
         yes();
     }
 };
-function problem4(){
+function problem4() {
     console.log("working");
     if (gameHidden === 3) {
         gameHidden++;
@@ -593,7 +594,7 @@ function problem4(){
         yes();
     }
 };
-function problem5(){
+function problem5() {
     console.log("working");
     if (gameHidden === 4) {
         gameHidden++;
@@ -603,7 +604,7 @@ function problem5(){
         yes();
     }
 };
-function problem6(){
+function problem6() {
     console.log("working");
     if (gameHidden === 5) {
         gameHidden++;
@@ -613,7 +614,7 @@ function problem6(){
         yes();
     }
 };
-function problem7(){
+function problem7() {
     console.log("working");
     if (gameHidden === 6) {
         gameHidden++;
@@ -623,7 +624,7 @@ function problem7(){
         yes();
     }
 };
-function problem8(){
+function problem8() {
     console.log("working");
     if (gameHidden === 7) {
         gameHidden++;
@@ -633,88 +634,88 @@ function problem8(){
         //end screen
     }
 }
-function problem1no(){
+function problem1no() {
     if (gameHidden === 0) {
-                gameHidden++;
-                incorrect++;
-                console.log("incorrect: " + incorrect);
-                setTimeout(renderQuestion2, 1000 * 2.5);
-                no();
-            }
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        setTimeout(renderQuestion2, 1000 * 2.5);
+        no();
+    }
 }
-function problem2no(){
+function problem2no() {
     if (gameHidden === 1) {
-                gameHidden++;
-                incorrect++;
-                console.log("incorrect: " + incorrect);
-                setTimeout(renderQuestion3, 1000 * 2.5);
-                no();
-            }
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        setTimeout(renderQuestion3, 1000 * 2.5);
+        no();
+    }
 }
-function problem3no(){
+function problem3no() {
     if (gameHidden === 2) {
-                gameHidden++;
-                incorrect++;
-                console.log("incorrect: " + incorrect);
-                setTimeout(renderQuestion4, 1000 * 2.5);
-                no();
-            }
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        setTimeout(renderQuestion4, 1000 * 2.5);
+        no();
+    }
 }
-function problem4no(){
+function problem4no() {
     if (gameHidden === 3) {
-                gameHidden++;
-                incorrect++;
-                console.log("incorrect: " + incorrect);
-                setTimeout(renderQuestion5, 1000 * 2.5);
-                no();
-            }
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        setTimeout(renderQuestion5, 1000 * 2.5);
+        no();
+    }
 }
-function problem5no(){
+function problem5no() {
     if (gameHidden === 4) {
-                gameHidden++;
-                incorrect++;
-                console.log("incorrect: " + incorrect);
-                setTimeout(renderQuestion6, 1000 * 2.5);
-                no();
-            }
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        setTimeout(renderQuestion6, 1000 * 2.5);
+        no();
+    }
 }
-function problem6no(){
+function problem6no() {
     if (gameHidden === 5) {
-                gameHidden++;
-                incorrect++;
-                console.log("incorrect: " + incorrect);
-                setTimeout(renderQuestion7, 1000 * 2.5);
-                no();
-            }
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        setTimeout(renderQuestion7, 1000 * 2.5);
+        no();
+    }
 }
-function problem7no(){
+function problem7no() {
     if (gameHidden === 6) {
-                gameHidden++;
-                incorrect++;
-                console.log("incorrect: " + incorrect);
-                setTimeout(renderQuestion8, 1000 * 2.5);
-                no();
-            }
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        setTimeout(renderQuestion8, 1000 * 2.5);
+        no();
+    }
 }
-function problem8no(){
+function problem8no() {
     if (gameHidden === 7) {
-                gameHidden++;
-                incorrect++;
-                console.log("incorrect: " + incorrect);
-                scoreScreen();
-                //end;
-            }
+        gameHidden++;
+        incorrect++;
+        console.log("incorrect: " + incorrect);
+        scoreScreen();
+        //end;
+    }
 }
-function yes(){
+function yes() {
     $(".question").empty();
     $(".question").append('<img id="theImg" src="assets/images/YES.gif" />');
 
 }
-function no(){
+function no() {
     $(".question").empty();
     $(".question").append('<img id="theImg" src="assets/images/Nope.gif" />');
 }
-function scoreScreen(){
+function scoreScreen() {
     $(".question").empty();
     var right = $("<h2>");
     var wrong = $("<h2>");
@@ -739,6 +740,39 @@ $(document).on("click", ".Q6", problem6no);
 $(document).on("click", ".Q7", problem7no);
 $(document).on("click", ".Q8", problem8no);
 
+function count() {
+    time--;
+    var converted = timeConverter(time);
+    $(".timer").text(converted);
+}
+function countDown() {
+
+    if (!clockRunning) {
+      intervalId = timeConverter(count, -1000);
+      clockRunning = true;
+    }
+
+}
+function timeConverter(t) {
+
+    var minutes = Math.floor(t / 60);
+    var seconds = t - (minutes * 60);
+
+    if (seconds < 10) {
+        seconds = "0" + seconds;
+    }
+
+    if (minutes === 0) {
+        minutes = "00";
+    }
+    else if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+
+    return minutes + ":" + seconds;
+}
+console.log(countDown());
+
 
 
 
@@ -749,18 +783,18 @@ $(document).on("click", ".Q8", problem8no);
 
 //     var minutes = Math.floor(t / 60);
 //     var seconds = t - (minutes * 60);
-  
+
 //     if (seconds < 10) {
 //       seconds = "0" + seconds;
 //     }
-  
+
 //     if (minutes === 0) {
 //       minutes = "00";
 //     }
 //     else if (minutes < 10) {
 //       minutes = "0" + minutes;
 //     }
-  
+
 //     return minutes + ":" + seconds;
 //   }
 
